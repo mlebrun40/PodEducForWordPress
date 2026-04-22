@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "podedu/video-block",
+  "version": "1.3",
+  "title": "Vidéo PodEduc",
+  "category": "embed",
+  "icon": "video-alt3",
+  "description": "Intégrez une vidéo hébergée sur PodEduc.",
+  "keywords": ["podeduc", "vidéo", "embed"],
+  "supports": { "html": false, "align": ["wide", "full"] },
+  "attributes": {
+    "videoId":     { "type": "string",  "default": "" },
+    "videoUrl":    { "type": "string",  "default": "" },
+    "title":       { "type": "string",  "default": "Vidéo PodEduc" },
+    "aspectRatio": { "type": "string",  "default": "16/9" },
+    "showCaption": { "type": "boolean", "default": false },
+    "caption":     { "type": "string",  "default": "" }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}
